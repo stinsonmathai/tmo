@@ -1,2 +1,2 @@
-Redfish Functions
-This is from Stin
+This repo contains redfish API calls for 
+HPE iLO5.
