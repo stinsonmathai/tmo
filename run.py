@@ -22,3 +22,4 @@ rf.set_hostname(un, pw, url, hostname="host.domain.com")
 rf.enable_sriov(un, pw, url)
 
 
+# this is a test
