@@ -1,2 +1,11 @@
-Redfish Functions
-This is from Stin
+### Redfish Functions
+
+#### Install
+
+pip install python-ilorest-library
+
+#### Example usage
+
+python run.py
+
+
