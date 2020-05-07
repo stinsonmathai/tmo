@@ -1,10 +1,5 @@
 import rf
-
-un = "admin"
-pw = "admin"
-url = "https://16.91.158.182"
-api = 1
-unit = 1
+from rf.config import *
 
 # Login session
 rfo = rf.login(un, pw, url)
