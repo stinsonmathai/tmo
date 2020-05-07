@@ -18,3 +18,5 @@ def login(un, pw, url):
         raise Exception("ERROR: server not reachable or doesn't support RedFish.")
     except Exception as excp:
         raise excp
+
+    #TODO: I logged in with the vpn turned on and then ran the getmodel and the prompt just hung
