@@ -8,7 +8,6 @@ from rf.get_disk_capacity import get_disk_capacity
 from rf.get_uuid import get_uuid
 from rf.get_network_adapters_blob import get_network_adapters_blob
 from rf.get_nic_blob import get_nic_blob
-from rf.get_nic_ilo_blob import get_nic_ilo_blob
 from rf.reboot_server import reboot_server
 from rf.set_hostname import set_hostname
 from rf.enable_sriov import enable_sriov

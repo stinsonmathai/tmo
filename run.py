@@ -10,10 +10,7 @@ unit = 1
 rfo = rf.login(un, pw, url)
 
 # Functions
-print(rf.reboot_server(rfo))
-
-# Logoff
-rfo.logout()
+print(rf.get_model(rfo))
 
 """
 # Completed functions
@@ -30,5 +27,8 @@ print(rf.get_disk_blob(rfo))
 
 print(rf.set_hostname(rfo, hostname="host.domain.com"))
 print(rf.enable_sriov(rfo))
+print(rf.reboot_server(rfo))
 """
 
+# Logoff
+rfo.logout()
