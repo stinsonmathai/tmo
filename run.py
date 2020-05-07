@@ -21,3 +21,4 @@ rf.reboot_server(un, pw, url)
 rf.set_hostname(un, pw, url, hostname="host.domain.com")
 rf.enable_sriov(un, pw, url)
 
+

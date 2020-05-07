@@ -1,2 +1,11 @@
-This repo contains redfish API calls for 
-HPE iLO5.
+### Redfish Functions
+
+#### Install
+
+pip install python-ilorest-library
+
+#### Example usage
+
+python run.py
+
+
