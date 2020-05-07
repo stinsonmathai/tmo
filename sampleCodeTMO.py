@@ -9,8 +9,7 @@ def get_model(un, pw, ip):
         return 'pwd or connect err'
     else:
         if response.status_code != 200:
-            print("\n- Bios FAIL, GET command failed to get Dell switch connection collection, st
-            atus
+            print("\n- Bios FAIL, GET command failed to get Dell switch connection collection, st atus
             code % s
             " %
             (response.status_code))

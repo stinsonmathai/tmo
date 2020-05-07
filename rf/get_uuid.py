@@ -1,11 +1,7 @@
-from rf.login import login
-
-
-def get_uuid(un, pw, url, api=1, unit=1):
-    """"
-    (str) The universal unique identifier for this system
-    """
-    rfo = login(un, pw, url)
+def get_uuid(rfo, api=1, unit=1):
+    """" (str) The universal unique identifier for this system """
     res = rfo.get(f"/redfish/v{api}/systems/{unit}")
-    print(f"UUID: {res.dict['UUID']}")
-    rfo.logout()
+    if res.status != 200:
+        print(f"HTTP Fail Status: {res.status}")
+        return("XXX")
+    return res.dict['UUID']
