@@ -6,37 +6,38 @@ Done - def get_firmware(un, pw, ip):
 Done - def get_memory_count(un, pw, ip):
 Done - def get_memory_size(un, pw, ip):
 Done - def get_memory_total(un, pw, ip):
-def get_cpu(un, pw, ip):
-def get_eth(un, pw, ip, nicname):
-def get_memory(un, pw, ip):
-def get_bios(un, pw, ip):
-def get_tag(un, pw, ip):
-def get_status(un, pw, ip):
-def get_cpu_blob(un, pw, ip):
-def get_mem_blob(un, pw, ip):
+TODO: def get_cpu(un, pw, ip):
+TODO: def get_eth(un, pw, ip, nicname):
+TODO: def get_memory(un, pw, ip):
+TODO: def get_bios(un, pw, ip):
+TODO: def get_tag(un, pw, ip):
+TODO: def get_status(un, pw, ip):
+TODO: def get_cpu_blob(un, pw, ip):
+TODO: def get_mem_blob(un, pw, ip):
 Done - def get_nic_blob(un, pw, ip):
-def get_disk_blob(un, pw, ip):
+TODO: def get_disk_blob(un, pw, ip):
 Done - def get_disk_count(un, pw, ip):
 Done - def get_disk_capacity(un, pw, ip):
 Done - def get_uuid(un, pw, ip):
 
 POST:
-def reboot_server
-def set_hostname
-def set_dns
-def set_ntp
-def set_timezone
-def set_server_location_information ( Datacenter/ RR / Usage information)
-def update_firmware/bios
-def set_license_key
-def set_power_options (Balanced / Power cap disabled)
-def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
-def change_password
-def create_user
-def enable_alerts
-def set_SNMP
-def confirgure_RAID
-def create_virtal_disks
-def enable_sriov
-def set_boot_mode/order
-def install_os
+Done - def reboot_server
+Done - def set_hostname
+Done - def set_dns
+TODO: def set_ntp
+Done - Need to test - def set_timezone
+TODO: def set_server_location_information ( Datacenter/ RR / Usage information)
+TODO: def update_firmware/bios
+TODO: def set_license_key
+TODO: def set_power_options (Balanced / Power cap disabled)
+TODO: def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
+TODO: def change_password
+TODO: def create_user
+TODO: def enable_alerts
+TODO: def set_SNMP
+TODO: def confirgure_RAID
+TODO: def create_virtal_disks
+Done - def enable_sriov
+TODO: def set_boot_mode/order
+TODO: def install_os
+
