@@ -1,6 +1,8 @@
 import rf
 from rf.config import *
 
+# This is john
+
 # Login session
 rfo = rf.login(un, pw, url)
 
@@ -27,6 +29,7 @@ print(rf.set_dns(rfo, dns="8.8.8.8"))
 print(rf.set_timezone(rfo, tz="UtcM5"))
 print(rf.set_license_key(rfo, key="xxxx"))
 """
+
 
 # Logoff
 rfo.logout()
