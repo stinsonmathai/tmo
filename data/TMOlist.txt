@@ -14,7 +14,7 @@ def get_tag(un, pw, ip):
 def get_status(un, pw, ip):
 def get_cpu_blob(un, pw, ip):
 def get_mem_blob(un, pw, ip):
-def get_nic_blob(un, pw, ip):
+Done - def get_nic_blob(un, pw, ip):
 def get_disk_blob(un, pw, ip):
 Done - def get_disk_count(un, pw, ip):
 Done - def get_disk_capacity(un, pw, ip):
