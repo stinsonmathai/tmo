@@ -14,5 +14,6 @@ from rf.enable_sriov import enable_sriov
 from rf.set_dns import set_dns
 from rf.set_timezone import set_timezone
 from rf.set_license_key import set_license_key
+from rf.set_power_options import set_power_options
 
 

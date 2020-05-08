@@ -1,2 +1,5 @@
 *.idea
 .DS_Store
+*__pycache
+*.pyc
+rf/__pycache__/__init__.cpython-37.pyc

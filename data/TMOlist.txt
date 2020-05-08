@@ -29,7 +29,7 @@ Done - Need to test - def set_timezone
 TODO: def set_server_location_information ( Datacenter/ RR / Usage information)
 TODO: def update_firmware/bios
 Done - def set_license_key
-TODO: def set_power_options (Balanced / Power cap disabled)
+Done - def set_power_options (Balanced / Power cap disabled)
 TODO: def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
 TODO: def change_password
 TODO: def create_user

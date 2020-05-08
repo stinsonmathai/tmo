@@ -9,7 +9,6 @@ from rf.config import *
 rfo = rf.login(un, pw, url)
 
 # Functions
-print(rf.get_model(rfo))
 
 """
 # Completed functions
@@ -30,6 +29,7 @@ print(rf.set_hostname(rfo, hostname="host.domain.com"))
 print(rf.set_dns(rfo, dns="8.8.8.8"))
 print(rf.set_timezone(rfo, tz="UtcM5"))
 print(rf.set_license_key(rfo, key="xxxx"))
+print(rf.set_power_options(rfo, mode="BalancedMode"))
 """
 
 
