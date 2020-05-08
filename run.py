@@ -1,7 +1,9 @@
 import rf
 from rf.config import *
 
+
 # This is  Stinson john
+
 
 # Login session
 rfo = rf.login(un, pw, url)
