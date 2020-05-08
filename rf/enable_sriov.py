@@ -5,7 +5,7 @@ def enable_sriov(rfo, enable="Enabled", api=1, unit=1):
     body["Attributes"]["Sriov"] = enable
     res = rfo.patch(f"/redfish/v{api}/Systems/{unit}/bios/settings", body)
     if res.status != 200:
-        print(f"HTTP Fail Status: {res.status}")
-        return ("XXX")
+        print(f"Error: {res.status}: {res.read}")
+        return "XXX"
     return "Success"
 

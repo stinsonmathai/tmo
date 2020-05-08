@@ -3,14 +3,14 @@ def get_nic_blob(rfo, category="Systems", api=1, unit=1):
     blob = ""
     res = rfo.get(f"/redfish/v{api}/{category}/{unit}/EthernetInterfaces")
     if res.status != 200:
-        print(f"HTTP Fail Status: {res.status}")
-        return("XXX")
+        print(f"Error: {res.status}: {res.read}")
+        return "XXX"
     members = res.dict['Members']
     for m in members:
         res = rfo.get(m['@odata.id'])
         if res.status != 200:
-            print(f"HTTP Member Fail Status: {res.status}")
-            return ("XXX")
+            print(f"Member Error: {res.status}: {res.read}")
+            return "XXX"
         blob = blob + (
             f"Ethernet Interface {m['@odata.id']} MAC Address: {res.dict['MACAddress']}\n"
             f"Ethernet Interface {m['@odata.id']} IP4 Addresses: {res.dict['IPv4Addresses']}\n"
