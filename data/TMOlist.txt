@@ -1,11 +1,11 @@
 
 
 GET:
-def get_model(un, pw, ip):
-def get_firmware(un, pw, ip):
-def get_memory_count(un, pw, ip):
-def get_memory_size(un, pw, ip):
-def get_memory_total(un, pw, ip):
+Done - def get_model(un, pw, ip):
+Done - def get_firmware(un, pw, ip):
+Done - def get_memory_count(un, pw, ip):
+Done - def get_memory_size(un, pw, ip):
+Done - def get_memory_total(un, pw, ip):
 def get_cpu(un, pw, ip):
 def get_eth(un, pw, ip, nicname):
 def get_memory(un, pw, ip):
@@ -16,9 +16,9 @@ def get_cpu_blob(un, pw, ip):
 def get_mem_blob(un, pw, ip):
 def get_nic_blob(un, pw, ip):
 def get_disk_blob(un, pw, ip):
-def get_disk_count(un, pw, ip):
-def get_disk_capacity(un, pw, ip):
-def get_uuid(un, pw, ip):
+Done - def get_disk_count(un, pw, ip):
+Done - def get_disk_capacity(un, pw, ip):
+Done - def get_uuid(un, pw, ip):
 
 POST:
 def reboot_server
