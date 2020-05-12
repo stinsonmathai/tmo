@@ -36,7 +36,7 @@ Done - def set_license_key
 Done - def set_power_options (Balanced / Power cap disabled)
 TODO: def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
 TODO: def change_password
-TODO: def create_user
+DONE - def create_user
 TODO: def enable_alerts
 Done - def set_SNMP
 TODO: def confirgure_RAID

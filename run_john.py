@@ -6,7 +6,7 @@ from rf.config import *
 rfo = rf.login(un, pw, url)
 
 # Functions
-print(rf.create_user(rfo, username, password, role))
+print(rf.create_user(rfo, "abc123", "ef2#adAD.", "Administrator"))
 
 
 """
@@ -23,6 +23,7 @@ print(rf.set_ntp(rfo, ntp=["132.163.96.5", "128.138.141.177"]))
 print(rf.set_firmware(rfo, 'data/ilo5_215.bin', True, False))
 print(rf.set_snmp(rfo, destination=["10.0.1.100"]))
 print(rf.set_snmp_alerts(rfo, alert=True, communities=["public", "", ""]))
+print(rf.create_user(rfo, "abc123", "ef2#adAD.", "Administrator"))
 """
 
 

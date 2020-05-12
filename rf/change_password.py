@@ -1,4 +1,4 @@
-def create_user(rfo, username, password, role, api=1):
+def change_password(rfo, username, password, api=1):
     """Create iLO user account
 
     Parameters:
