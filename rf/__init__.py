@@ -18,3 +18,8 @@ from rf.set_power_options import set_power_options
 from rf.get_cpu import get_cpu
 from rf.get_bios import get_bios
 from rf.get_tag import get_tag
+from rf.set_ntp import set_ntp
+from rf.set_firmware import set_firmware
+from rf.set_snmp import set_snmp
+from rf.set_snmp_alerts import set_snmp_alerts
+from rf.create_user import create_user

@@ -28,17 +28,17 @@ POST:
 Done - def reboot_server
 Done - def set_hostname
 Done - def set_dns
-TODO: def set_ntp
+Done - def set_ntp
 Done - Need to test - def set_timezone
-TODO: def set_server_location_information ( Datacenter/ RR / Usage information)
-TODO: def update_firmware/bios
+TODO: DO NOT HAVE CAPABILITY IN CURRENT ILO - def set_server_location_information ( Datacenter/ RR / Usage information)
+Done - def update_firmware/bios
 Done - def set_license_key
 Done - def set_power_options (Balanced / Power cap disabled)
 TODO: def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
 TODO: def change_password
 TODO: def create_user
 TODO: def enable_alerts
-TODO: def set_SNMP
+Done - def set_SNMP
 TODO: def confirgure_RAID
 TODO: def create_virtal_disks
 Done - def enable_sriov
