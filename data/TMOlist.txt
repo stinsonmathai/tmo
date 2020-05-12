@@ -3,19 +3,23 @@
 GET:
 Done - def get_model(un, pw, ip):
 Done - def get_firmware(un, pw, ip):
-Done - def get_memory_count(un, pw, ip):
-Done - def get_memory_size(un, pw, ip):
+TODO - def get_memory_count(un, pw, ip): # what is the number of DIMMS connected with memeory - 24 in the example.
+Done - def get_memory_size(un, pw, ip): # whats is the size of the DIMM?  Check if the DIMMS are matched.
 Done - def get_memory_total(un, pw, ip):
-TODO: def get_cpu(un, pw, ip):
-TODO: def get_eth(un, pw, ip, nicname):
 TODO: def get_memory(un, pw, ip):
-TODO: def get_bios(un, pw, ip):
-TODO: def get_tag(un, pw, ip):
-TODO: def get_status(un, pw, ip):
-TODO: def get_cpu_blob(un, pw, ip):
-TODO: def get_mem_blob(un, pw, ip):
+Done - def get_cpu(un, pw, ip):
+TODO: def get_eth(un, pw, ip, nicname):
+
+Done - def get_bios(un, pw, ip):
+Done - def get_tag(un, pw, ip):
+TODO: def get_status(un, pw, ip):  # which status.. there are various levels of status - https://16.91.158.182/redfish/v1/chassis/1/
+#    "Status": {
+        "Health": "OK",
+TODO: def get_cpu_blob(un, pw, ip):  # which format would TMO like this information in?
+
+TODO: def get_mem_blob(un, pw, ip):  # which format would TMO like this information in?
 Done - def get_nic_blob(un, pw, ip):
-TODO: def get_disk_blob(un, pw, ip):
+TODO: def get_disk_blob(un, pw, ip):  # which format would TMO like this information in?
 Done - def get_disk_count(un, pw, ip):
 Done - def get_disk_capacity(un, pw, ip):
 Done - def get_uuid(un, pw, ip):
@@ -39,5 +43,10 @@ TODO: def confirgure_RAID
 TODO: def create_virtal_disks
 Done - def enable_sriov
 TODO: def set_boot_mode/order
-TODO: def install_os
+TODO: def install_os - for unattended install - look into the ISO
+
+TODO: write instruction in the readme on how to add a function...
+TODO: write instructions on how to run a function.
+TODO: brief write up in readme on what the _init_, config files etc do.
+
 
