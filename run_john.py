@@ -6,8 +6,8 @@ from rf.config import *
 rfo = rf.login(un, pw, url)
 
 # Functions
-print(rf.create_user(rfo, "abc123", "ef2#adAD.", "Administrator"))
-
+print(rf.set_boot_order(rfo, order=["Cd", "EmbeddedStorage", "PcieSlotStorage", "EmbeddedFlexLOM",
+                                    "PcieSlotNic", "UefiShell", "Usb"]))
 
 """
 api=1
@@ -24,6 +24,11 @@ print(rf.set_firmware(rfo, 'data/ilo5_215.bin', True, False))
 print(rf.set_snmp(rfo, destination=["10.0.1.100"]))
 print(rf.set_snmp_alerts(rfo, alert=True, communities=["public", "", ""]))
 print(rf.create_user(rfo, "abc123", "ef2#adAD.", "Administrator"))
+print(rf.change_password(rfo, "abc123", "ef2#adAD."))
+print(rf.set_jitter(rfo, mode="Auto-tuned"))
+print(rf.set_turbo(rfo, mode="Enabled"))
+print(rf.set_virtualization(rfo, mode="Enabled"))
+
 """
 
 

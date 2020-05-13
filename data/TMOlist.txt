@@ -1,3 +1,6 @@
+TODO: write instruction in the readme on how to add a function...
+TODO: write instructions on how to run a function.
+TODO: brief write up in readme on what the _init_, config files etc do.
 
 
 GET:
@@ -34,19 +37,16 @@ TODO: DO NOT HAVE CAPABILITY IN CURRENT ILO - def set_server_location_informatio
 Done - def update_firmware/bios
 Done - def set_license_key
 Done - def set_power_options (Balanced / Power cap disabled)
-TODO: def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
-TODO: def change_password
-DONE - def create_user
-TODO: def enable_alerts
+Done - def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
+Done - def change_password
+Done - def create_user
+Done - def enable_alerts
 Done - def set_SNMP
 TODO: def confirgure_RAID
 TODO: def create_virtal_disks
 Done - def enable_sriov
-TODO: def set_boot_mode/order
+Done - def set_boot_mode/order
 TODO: def install_os - for unattended install - look into the ISO
 
-TODO: write instruction in the readme on how to add a function...
-TODO: write instructions on how to run a function.
-TODO: brief write up in readme on what the _init_, config files etc do.
 
 

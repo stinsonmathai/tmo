@@ -3,7 +3,11 @@ def set_timezone(rfo, tz, api=1, unit=1):
 
     Parameters:
     rfo (object): Redfish login session
-    tz (str): TODO: Available timezones
+    tz (str): Examples: UtcM10:UTC-10:00, Hawaii
+                        UtcM8:UTC-08:00, Pacific Time(US & Canada)
+                        UtcM7:UTC-07:00, Mountain Time (US & Canada)
+                        UtcM6:UTC-06:00, Central America, Central Time(US & Canada)
+                        UtcM5:UTC-05:00, Eastern Time(US & Canada)
     api (int): API version
     unit (int): Enumerated component unit
 
