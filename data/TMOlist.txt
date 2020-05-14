@@ -42,8 +42,8 @@ Done - def change_password
 Done - def create_user
 Done - def enable_alerts
 Done - def set_SNMP
-TODO: def confirgure_RAID
-TODO: def create_virtal_disks
+TODO: def confirgure_RAID # Need lab box
+TODO: def create_virtal_disks # Need lab box
 Done - def enable_sriov
 Done - def set_boot_mode/order
 TODO: def install_os - for unattended install - look into the ISO
