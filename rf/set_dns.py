@@ -1,4 +1,3 @@
-
 def set_dns(rfo, dns, api=1, unit=1):
     """Set Primary DNS Servers
 

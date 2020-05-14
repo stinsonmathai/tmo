@@ -1,21 +1,20 @@
 
 def get_disk_capacity(rfo, api=1, unit=1):
-    """
-        This function fetches the Disk Capacity of the server.
-        URL is https://IP_ADDRESS/redfish/v1/chassis/1/
-        Information is in the following JSON snippet.
-            "Links": {
-                "Drives":}
+    """ This function fetches the Disk Capacity of the server.
+    URL is https://IP_ADDRESS/redfish/v1/chassis/1/
+    Information is in the following JSON snippet.
+        "Links": {
+            "Drives":}
 
-        NOTE: There could be multiple drives in the server.
+    NOTE: There could be multiple drives in the server.
 
-            Parameters:
-            object: Redfish Client Login Object
-            int: API Value
-            int: Unit Value
+    Parameters:
+    rfo (object): Redfish Client Login Object
+    api (int): API Value
+    unit (int): Unit Value
 
-            Returns:
-            Integer: Combined Disk Capacity (Bytes)
+    Returns:
+    int: Combined Disk Capacity (Bytes)
     """
 
     blob = ""

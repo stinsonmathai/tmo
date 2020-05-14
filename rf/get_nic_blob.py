@@ -13,7 +13,7 @@ def get_nic_blob(rfo, api=1, unit=1):
     int: Unit Value
 
     Returns:
-    JSON Array: Details of each of the Ethernet Interfaces in the Server
+    list: JSON - Details of each of the Ethernet Interfaces in the Server
     """
     blob = []
     res = rfo.get(f"/redfish/v{api}/systems/{unit}/EthernetInterfaces")

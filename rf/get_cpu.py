@@ -1,7 +1,6 @@
 
 def get_cpu(rfo, api=1, unit=1):
-    """
-    This function fetches the CPU model of the server.
+    """This function fetches the CPU model of the server.
     URL is https://IP_ADDRESS/redfish/v1/systems/1/
     Information is in the following JSON snippet.
     "ProcessorSummary": {

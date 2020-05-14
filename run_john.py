@@ -4,10 +4,9 @@ from rf.config import *
 
 # Login session
 rfo = rf.login(un, pw, url)
+print(rf.get_nic_names(rfo))
 
-# Functions
-print(rf.set_boot_order(rfo, order=["Cd", "EmbeddedStorage", "PcieSlotStorage", "EmbeddedFlexLOM",
-                                    "PcieSlotNic", "UefiShell", "Usb"]))
+
 
 """
 api=1
@@ -28,9 +27,13 @@ print(rf.change_password(rfo, "abc123", "ef2#adAD."))
 print(rf.set_jitter(rfo, mode="Auto-tuned"))
 print(rf.set_turbo(rfo, mode="Enabled"))
 print(rf.set_virtualization(rfo, mode="Enabled"))
+print(rf.set_boot_order(rfo, order=["Cd", "EmbeddedStorage", "PcieSlotStorage", "EmbeddedFlexLOM",
+                                    "PcieSlotNic", "UefiShell", "Usb"]))
+print(rf.get_disk_blob(rfo))
+print(rf.get_mem_blob(rfo))
+print(rf.get_cpu_blob(rfo))
 
 """
-
 
 # Logoff
 rfo.logout()

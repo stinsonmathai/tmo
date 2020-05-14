@@ -1,6 +1,15 @@
 def get_network_adapters_blob(rfo, api=1, unit=1):
-    """" (str) Network Interface Information """
-    blob = ""
+    """Aggregate network adapter information
+
+    Parameters:
+    rfo (object): Redfish Client Login Object
+    api (int): API Value
+    unit (int): Unit Value
+
+    Returns:
+    list: JSON
+    """
+    blob = []
     res = rfo.get(f"/redfish/v{api}/Chassis/{unit}/NetworkAdapters")
     members = res.dict['Members']
     for m in members:
@@ -20,13 +29,6 @@ def get_network_adapters_blob(rfo, api=1, unit=1):
                 if res.status != 200:
                     print(f"Device Error: {res.status}: {res.read}")
                     return "XXX"
-            blob = blob + (
-                f"Port {d['@odata.id']} Link Status: {res.dict['LinkStatus']}\n"
-                f"Port {d['@odata.id']} Name: {res.dict['Name']}\n"
-                f"Port {d['@odata.id']} Physical Port Number: {res.dict['PhysicalPortNumber']}\n"
-                f"Port {d['@odata.id']} Signal Detected: {res.dict['SignalDetected']}\n"
-                f"Port {d['@odata.id']} Capable Link Speed: {res.dict['SupportedLinkCapabilities'][0]['CapableLinkSpeedMbps']}\n"
-                f"Port {d['@odata.id']} Link Technology: {res.dict['SupportedLinkCapabilities'][0]['LinkNetworkTechnology']}\n"
-            )
+            blob.append(res.dict)
     return blob
 

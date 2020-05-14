@@ -16,4 +16,4 @@ def set_license_key(rfo, key, api=1, unit=1):
     if res.status != 200:
         print(f"HTTP Fail Status: {res.status} - {res.read}")
         return("XXX")
-    return "Success: " + res.read
+    return f"Success: {res.status} - {res.read}"

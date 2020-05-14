@@ -1,5 +1,15 @@
 def enable_sriov(rfo, enable="Enabled", api=1, unit=1):
-    """" (str) Enable SRIOV """
+    """Enable SRIOV
+
+    Parameters:
+    rfo (object): Redfish login session
+    enable (str): Enabled, Disabled
+    api (int): API Value
+    unit (int): Unit Value
+
+    Returns:
+    str: iLO response status
+    """
     body = dict()
     body["Attributes"] = dict()
     body["Attributes"]["Sriov"] = enable
@@ -7,5 +17,5 @@ def enable_sriov(rfo, enable="Enabled", api=1, unit=1):
     if res.status != 200:
         print(f"Error: {res.status}: {res.read}")
         return "XXX"
-    return "Success"
+    return f"Success: {res.status}: {res.read}"
 

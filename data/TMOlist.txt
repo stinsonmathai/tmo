@@ -16,19 +16,14 @@ Done - def get_disk_capacity(rfo)
 Done - def get_disk_count(rfo)
 Done - def get_nic_names(rfo) --> extra function
 Done - def get_nic_blob(rfo)
-
+Done - def get_cpu_blob(un, pw, ip)
+Done - def get_mem_blob(un, pw, ip)
+Done - def get_disk_blob(un, pw, ip)
 
 TODO: def get_eth(un, pw, ip, nicname):
-
 TODO - def get_memory_count(un, pw, ip): # what is the number of DIMMS connected with memeory - 24 in the example.
 TODO - def get_memory_size(un, pw, ip): # whats is the size of the DIMM?  Check if the DIMMS are matched.
 TODO: def get_memory(un, pw, ip):
-
-TODO: def get_cpu_blob(un, pw, ip):  # which format would TMO like this information in?
-TODO: def get_mem_blob(un, pw, ip):  # which format would TMO like this information in?
-TODO: def get_disk_blob(un, pw, ip):  # which format would TMO like this information in?
-
-
 
 
 POST:
@@ -39,7 +34,7 @@ Done - def set_ntp
 Done - Need to test - def set_timezone
 TODO: DO NOT HAVE CAPABILITY IN CURRENT ILO - def set_server_location_information ( Datacenter/ RR / Usage information)
 Done - def update_firmware/bios
-Done - def set_license_key
+Done - def set_license_key TODO: Implemented but not tested (waiting for lab server)
 Done - def set_power_options (Balanced / Power cap disabled)
 Done - def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
 Done - def change_password

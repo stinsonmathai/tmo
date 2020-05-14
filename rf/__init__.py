@@ -30,4 +30,6 @@ from rf.set_jitter import set_jitter
 from rf.set_turbo import set_turbo
 from rf.set_virtualization import set_virtualization
 from rf.set_boot_order import set_boot_order
+from rf.get_cpu_blob import get_cpu_blob
+from rf.get_mem_blob import get_mem_blob
 

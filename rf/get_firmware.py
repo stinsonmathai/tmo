@@ -1,7 +1,5 @@
-
 def get_firmware(rfo, api=1, unit=1):
-    """
-    This function fetches the FIRMWARE of the server.
+    """This function fetches the FIRMWARE of the server.
     URL is https://IP_ADDRESS/redfish/v1/chassis/1/
     Information is in the following JSON snippet.
     OEM": {
@@ -11,15 +9,14 @@ def get_firmware(rfo, api=1, unit=1):
                         "Current": {
                             "VersionString"}}}}
 
-        Parameters:
-        object: Redfish Client Login Object
-        int: API Value
-        int: Unit Value
+    Parameters:
+    rfo (object): Redfish Client Login Object
+    api (int): API Value
+    unit (int): Unit Value
 
-        Returns:
-        string: Firmware
+    Returns:
+    string: Firmware
     """
-
     res = rfo.get(f"/redfish/v{api}/chassis/{unit}")
     if res.status != 200:
         print(f"Error: {res.status}: {res.read}")

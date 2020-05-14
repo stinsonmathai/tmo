@@ -1,19 +1,16 @@
 
-
-
 def get_nic_names(rfo, api=1, unit=1):
-    """
-    This function fetches the names of the NICS on the server.
+    """ This function fetches the names of the NICS on the server.
     URL is https://IP_ADDRESS/redfish/v1/systems/1/
     MODEL information is at the top level of the JSON Hierarchy
 
-        Parameters:
-        object: Redfish Client Login Object
-        int: API Value
-        int: Unit Value
+    Parameters:
+    rfo (object): Redfish Client Login Object
+    api (int): API Value
+    unit (int): Unit Value
 
-        Returns:
-        list: names of the NICS on the server
+    Returns:
+    list: Names of the NICS on the server
     """
     nic_names = []
     res = rfo.get(f"/redfish/v{api}/Systems/{unit}/EthernetInterfaces")
@@ -26,5 +23,5 @@ def get_nic_names(rfo, api=1, unit=1):
         if res.status != 200:
             print(f"Member Error: {res.status}: {res.read}")
             return "XXX"
-        nic_names.append({res.dict['Name']}) #TODO: look at why this is a dictionary and not an element
+        nic_names.append(res.dict['Name'])
     return nic_names

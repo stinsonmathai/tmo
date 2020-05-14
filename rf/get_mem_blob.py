@@ -1,9 +1,5 @@
-
-
-def get_eth(rfo, api=1, unit=1, nic_name =""):
-    """This function fetches the information of a specific NIC on the server.
-    URL is https://IP_ADDRESS/redfish/v1/systems/1/
-    MODEL information is at the top level of the JSON Hierarchy
+def get_mem_blob(rfo, api=1, unit=1):
+    """Aggregate memory DIMM information
 
     Parameters:
     rfo (object): Redfish Client Login Object
@@ -11,9 +7,10 @@ def get_eth(rfo, api=1, unit=1, nic_name =""):
     unit (int): Unit Value
 
     Returns:
-    list: names of the NICS on the server
+    list: JSON
     """
-    res = rfo.get(f"/redfish/v{api}/Systems/{unit}/EthernetInterfaces")
+    blob = []
+    res = rfo.get(f"/redfish/v{api}/Systems/{unit}/Memory")
     if res.status != 200:
         print(f"Error: {res.status}: {res.read}")
         return "XXX"
@@ -23,5 +20,6 @@ def get_eth(rfo, api=1, unit=1, nic_name =""):
         if res.status != 200:
             print(f"Member Error: {res.status}: {res.read}")
             return "XXX"
-        nic_names.append({res.dict['Name']})
-    return nic_names
+        blob.append(res.dict)
+    return blob
+

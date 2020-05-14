@@ -1,19 +1,17 @@
-
 def get_status(rfo, api=1, unit=1):
-    """
-    This function fetches the Health Status of the server.
+    """This function fetches the Health Status of the server.
     URL is https://IP_ADDRESS/redfish/v1/systems/1/
     Information is in the following JSON snippet.
     "Status": {
         "Health":}
 
-        Parameters:
-        object: Redfish Client Login Object
-        int: API Value
-        int: Unit Value
+    Parameters:
+    rfo (object): Redfish Client Login Object
+    api (int): API Value
+    unit (int): Unit Value
 
-        Returns:
-        string: Health Status
+    Returns:
+    str: Health Status
     """
     res = rfo.get(f"/redfish/v{api}/Systems/{unit}")
     if res.status != 200:
