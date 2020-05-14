@@ -18,3 +18,5 @@ from rf.set_power_options import set_power_options
 from rf.get_cpu import get_cpu
 from rf.get_bios import get_bios
 from rf.get_tag import get_tag
+from rf.get_status import get_status
+from rf.get_nic_names import get_nic_names

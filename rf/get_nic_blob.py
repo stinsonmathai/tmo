@@ -1,7 +1,23 @@
-def get_nic_blob(rfo, category="Systems", api=1, unit=1):
-    """" (str) Network interfaces """
-    blob = ""
-    res = rfo.get(f"/redfish/v{api}/{category}/{unit}/EthernetInterfaces")
+import json
+
+
+def get_nic_blob(rfo, api=1, unit=1):
+    """
+        This function fetches information about EACH of the network interfaces of the server.
+        URL is https://IP_ADDRESS/redfish/v1/systems/1/EthernetInterfaces/
+
+        NOTE: There could be multiple interfaces in the server.
+
+            Parameters:
+            object: Redfish Client Login Object
+            int: API Value
+            int: Unit Value
+
+            Returns:
+            JSON Array: Details of each of the Ethernet Interfaces in the Server
+    """
+    blob = []
+    res = rfo.get(f"/redfish/v{api}/systems/{unit}/EthernetInterfaces")
     if res.status != 200:
         print(f"Error: {res.status}: {res.read}")
         return "XXX"
@@ -10,17 +26,9 @@ def get_nic_blob(rfo, category="Systems", api=1, unit=1):
         res = rfo.get(m['@odata.id'])
         if res.status != 200:
             print(f"Member Error: {res.status}: {res.read}")
-            return "XXX"
-        blob = blob + (
-            f"Ethernet Interface {m['@odata.id']} MAC Address: {res.dict['MACAddress']}\n"
-            f"Ethernet Interface {m['@odata.id']} IP4 Addresses: {res.dict['IPv4Addresses']}\n"
-            f"Ethernet Interface {m['@odata.id']} Name: {res.dict['Name']}\n"
-            f"Ethernet Interface {m['@odata.id']} Interface Enabled: {res.dict['InterfaceEnabled']}\n"
-            f"Ethernet Interface {m['@odata.id']} Link Status: {res.dict['LinkStatus']}\n"
-            f"Ethernet Interface {m['@odata.id']} Link State: {res.dict['Status']['State']}\n"
-            f"Ethernet Interface {m['@odata.id']} Link Health: {res.dict['Status']['Health']}\n"
-            f"Ethernet Interface {m['@odata.id']} Name Servers: {res.dict['NameServers']}\n"
-            f"Ethernet Interface {m['@odata.id']} Speed Mbps: {res.dict['SpeedMbps']}\n"
-        )
-    return blob
-
+            return "XXX"  #TODO should we break out here or just punch through the rest and note the error?
+        blob.append(res.dict)
+        #blob = blob + str(res.dict) #TODO -- this maynot be needed
+    blob_json = json.dumps(blob)
+    # This will return a JSON Array which has all the values for each of the Interfaces, Best Viewed in a JSON Viewer
+    return blob_json
