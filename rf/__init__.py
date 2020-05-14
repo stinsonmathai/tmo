@@ -20,3 +20,14 @@ from rf.get_bios import get_bios
 from rf.get_tag import get_tag
 from rf.get_status import get_status
 from rf.get_nic_names import get_nic_names
+from rf.set_ntp import set_ntp
+from rf.set_firmware import set_firmware
+from rf.set_snmp import set_snmp
+from rf.set_snmp_alerts import set_snmp_alerts
+from rf.create_user import create_user
+from rf.change_password import change_password
+from rf.set_jitter import set_jitter
+from rf.set_turbo import set_turbo
+from rf.set_virtualization import set_virtualization
+from rf.set_boot_order import set_boot_order
+
