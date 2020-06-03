@@ -4,14 +4,14 @@ TODO: brief write up in readme on what the _init_, config files etc do.
 
 
 GET:
-Done - def get_model(rfo)
-Done - def get_firmware(rfo)
-Done - def get_memory_total(rfo)
-Done - def get_tag(rfo)
-Done - def get_bios(rfo)
-Done - def get_cpu(rfo)
-Done - def get_status(rfo)
-Done - def get_uuid(rfo)
+Done ilo4/5 - def get_model(rfo)
+Done ilo4/5 - def get_firmware(rfo)
+Done ilo4/5 - def get_memory_total(rfo)
+Done ilo4/5 - def get_tag(rfo) NOTE: Returns empty asset string if empty
+Done ilo4/5 - def get_bios(rfo)
+Done ilo4/5 - def get_cpu(rfo)
+Done ilo4/5 - def get_status(rfo)
+Done ilo4/5 - def get_uuid(rfo)
 Done - def get_disk_capacity(rfo)
 Done - def get_disk_count(rfo)
 Done - def get_nic_names(rfo) --> extra function
@@ -33,6 +33,7 @@ Done - def set_dns
 Done - def set_ntp
 Done - Need to test - def set_timezone
 TODO: DO NOT HAVE CAPABILITY IN CURRENT ILO - def set_server_location_information ( Datacenter/ RR / Usage information)
+TODO: Alternative note section
 Done - def update_firmware/bios
 Done - def set_license_key TODO: Implemented but not tested (waiting for lab server)
 Done - def set_power_options (Balanced / Power cap disabled)

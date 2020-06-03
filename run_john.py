@@ -4,8 +4,21 @@ from rf.config import *
 
 # Login session
 rfo = rf.login(un, pw, url)
-print(rf.get_nic_names(rfo))
+print(rf.get_model(rfo))
+print(rf.get_firmware(rfo))
+print(rf.get_memory_total(rfo))
+print(rf.get_tag(rfo))
+print(rf.get_bios(rfo))
+print(rf.get_cpu(rfo))
+print(rf.get_status(rfo))
+print(rf.get_uuid(rfo))
+print(rf.get_disk_capacity(rfo))
 
+
+
+
+print(rf.get_mem_blob(rfo))
+print(rf.get_disk_count(rfo))
 
 
 """
@@ -32,6 +45,7 @@ print(rf.set_boot_order(rfo, order=["Cd", "EmbeddedStorage", "PcieSlotStorage", 
 print(rf.get_disk_blob(rfo))
 print(rf.get_mem_blob(rfo))
 print(rf.get_cpu_blob(rfo))
+print(rf.get_nic_names(rfo))
 
 """
 

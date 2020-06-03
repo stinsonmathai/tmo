@@ -17,8 +17,9 @@ def get_firmware(rfo, api=1, unit=1):
     Returns:
     string: Firmware
     """
-    res = rfo.get(f"/redfish/v{api}/chassis/{unit}")
+    res = rfo.get(f"/redfish/v{api}/managers/{unit}")
     if res.status != 200:
         print(f"Error: {res.status}: {res.read}")
         return "XXX"
-    return res.dict['Oem']['Hpe']['Firmware']['PlatformDefinitionTable']['Current']['VersionString']
+    return res.dict['FirmwareVersion']
+    # return res.dict['Oem']['Hpe']['Firmware']['PlatformDefinitionTable']['Current']['VersionString']
