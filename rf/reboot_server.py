@@ -9,8 +9,16 @@ def reboot_server(rfo, api=1, unit=1):
     Returns:
     str: Reboot status
     """
-    body = dict(Action="ComputerSystem.Reset", ResetType="ForceRestart")
-    res = rfo.post(f"/redfish/v{api}/Systems/{unit}/Actions/ComputerSystem.Reset/", body)
+
+    res = rfo.get(f"/redfish/v{api}/managers/{unit}")
+    if "iLO 4" in res.dict['FirmwareVersion']:
+        url = f"/redfish/v{api}/systems/{unit}"
+        body = dict(Action="Reset", ResetType="ForceRestart")
+    else:
+        url = f"/redfish/v{api}/Systems/{unit}/Actions/ComputerSystem.Reset/"
+        body = dict(Action="ComputerSystem.Reset", ResetType="ForceRestart")
+
+    res = rfo.post(url, body)
     if res.status != 200:
         print(f"Error: {res.status}: {res.read}")
         return "XXX"

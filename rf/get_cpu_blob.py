@@ -10,6 +10,14 @@ def get_cpu_blob(rfo, api=1, unit=1):
     list: JSON
     """
     blob = []
+
+    # iLO version
+    # res = rfo.get(f"/redfish/v{api}/managers/{unit}")
+    # if "iLO 4" in res.dict['FirmwareVersion']:
+        # url = f"/redfish/v{api}/systems/{unit}/NetworkAdapters"
+    # else:
+        # url = f"/redfish/v{api}/systems/{unit}/EthernetInterfaces"
+
     res = rfo.get(f"/redfish/v{api}/Systems/{unit}/Processors")
     if res.status != 200:
         print(f"Error: {res.status}: {res.read}")

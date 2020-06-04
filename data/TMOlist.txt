@@ -7,18 +7,19 @@ GET:
 Done ilo4/5 - def get_model(rfo)
 Done ilo4/5 - def get_firmware(rfo)
 Done ilo4/5 - def get_memory_total(rfo)
-Done ilo4/5 - def get_tag(rfo) NOTE: Returns empty asset string if empty
+Done ilo4/5 - def get_tag(rfo) NOTE: Asset string can be ""
 Done ilo4/5 - def get_bios(rfo)
 Done ilo4/5 - def get_cpu(rfo)
 Done ilo4/5 - def get_status(rfo)
 Done ilo4/5 - def get_uuid(rfo)
-Done - def get_disk_capacity(rfo)
-Done - def get_disk_count(rfo)
-Done - def get_nic_names(rfo) --> extra function
-Done - def get_nic_blob(rfo)
-Done - def get_cpu_blob(un, pw, ip)
-Done - def get_mem_blob(un, pw, ip)
-Done - def get_disk_blob(un, pw, ip)
+Done ilo4/5 - def get_disk_capacity(rfo)
+Done ilo4/5 - def get_disk_count(rfo)
+Done ilo4/5 - def get_disk_blob(un, pw, ip)
+Done ilo4/5 - def get_nic_blob(rfo)
+Done ilo4/5 - def get_cpu_blob(un, pw, ip)
+Done ilo4/5 - def get_mem_blob(un, pw, ip)
+Done ilo4/5 - def get_nic_names(rfo) --> extra function
+
 
 TODO: def get_eth(un, pw, ip, nicname):
 TODO - def get_memory_count(un, pw, ip): # what is the number of DIMMS connected with memeory - 24 in the example.
@@ -27,7 +28,7 @@ TODO: def get_memory(un, pw, ip):
 
 
 POST:
-Done - def reboot_server
+Done ilo4/5 - def reboot_server
 Done - def set_hostname
 Done - def set_dns
 Done - def set_ntp
@@ -44,7 +45,7 @@ Done - def enable_alerts
 Done - def set_SNMP
 TODO: def confirgure_RAID # Need lab box
 TODO: def create_virtal_disks # Need lab box
-Done - def enable_sriov
+Done ilo4/5 - def enable_sriov
 Done - def set_boot_mode/order
 TODO: def install_os - for unattended install - look into the ISO
 
