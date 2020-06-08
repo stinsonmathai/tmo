@@ -4,6 +4,10 @@ from rf.config import *
 # Login session
 rfo = rf.login(un, pw, url)
 
+print(rf.install_os(rfo, "http://16.214.16.78/custom.iso"))
+
+
+'''
 print(rf.get_model(rfo))
 print(rf.get_firmware(rfo))
 print(rf.get_memory_total(rfo))
@@ -19,11 +23,6 @@ print(rf.get_nic_blob(rfo))
 print(rf.get_cpu_blob(rfo))
 print(rf.get_mem_blob(rfo))
 print(rf.get_nic_names(rfo))
-
-print(rf.enable_sriov(rfo))
-print(rf.reboot_server(rfo))
-print(rf.set_hostname(rfo, hostname="RHOBLV04"))
-
 
 
 print(rf.set_dns(rfo, dns="8.8.8.8"))
@@ -41,12 +40,7 @@ print(rf.set_turbo(rfo, mode="Enabled"))
 print(rf.set_virtualization(rfo, mode="Enabled"))
 print(rf.set_boot_order(rfo, order=["Cd", "EmbeddedStorage", "PcieSlotStorage", "EmbeddedFlexLOM",
                                     "PcieSlotNic", "UefiShell", "Usb"]))
-print(rf.get_disk_blob(rfo))
-print(rf.get_mem_blob(rfo))
-print(rf.get_cpu_blob(rfo))
-print(rf.get_nic_names(rfo))
-
-"""
+'''
 
 # Logoff
 rfo.logout()

@@ -47,7 +47,7 @@ TODO: def confirgure_RAID # Need lab box
 TODO: def create_virtal_disks # Need lab box
 Done ilo4/5 - def enable_sriov
 Done - def set_boot_mode/order
-TODO: def install_os - for unattended install - look into the ISO
+Done - def install_os
 
 
 
