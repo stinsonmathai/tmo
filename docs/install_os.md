@@ -34,7 +34,7 @@ Sample ks.cfg file hosted on HTTP server:
 
 Insert virtual media and reset server:
 
-    rf.install_os(rfo, "http://16.214.16.78/custom.iso")
+    rf.install_os(rfo, "http://IP/custom.iso")
   
 
 
