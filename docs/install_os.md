@@ -22,7 +22,7 @@ Sample ks.cfg file hosted on HTTP server:
     vmaccepteula
     rootpw chAngme0!
     install --firstdisk=local --overwritevmfs --novmfsondisk
-    network --bootproto=static --device=vmnic0 --ip=16.83.130.28 --netmask=255.255.254.0 --gateway=16.83.130.1 --nameserver=8.8.8.8 --hostname=tmoserver
+    network --bootproto=static --ip=16.83.130.28 --netmask=255.255.254.0 --gateway=16.83.130.1 --nameserver=8.8.8.8 --hostname=tmoserver
     reboot --noeject
     %firstboot --interpreter=busybox
     vim-cmd hostsvc/enable_ssh
