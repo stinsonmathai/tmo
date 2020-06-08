@@ -17,8 +17,6 @@ HPE customized ESXi images include all of the required drivers and management so
     
 ### Create Kickstart configuration
 
-# Tmobile POC Kickstart file
-
 Sample ks.cfg file hosted on HTTP server:
 
     vmaccepteula
