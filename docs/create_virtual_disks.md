@@ -11,7 +11,7 @@
     
 ### Create RAID Disk
 
-By default, a default RAID1 configuration can be hard coded in the create_virtual_disks.py function:
+By default, a default RAID1 configuration is hard coded in the create_virtual_disks.py function:
 
     body = {
         "DataGuard": "Disabled",
@@ -29,7 +29,7 @@ By default, a default RAID1 configuration can be hard coded in the create_virtua
         ]
     }
 
-If a body dictionary variable is passed to the function, it will be used instead.
+If a body dictionary variable is passed to the function, it will be used instead of the above.
     
 To create the virtual raid disk:
 
