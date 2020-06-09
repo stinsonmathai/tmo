@@ -1,9 +1,9 @@
-def create_virtual_disks(rfo, body=None, api=1, unit=1):
+def create_virtual_disks(rfo, raid=None, api=1, unit=1):
     """Enable raid
 
     Parameters:
     rfo (object): Redfish login session
-    body (dictionary): Raid configuration
+    raid (dictionary): Raid configuration
     api (int): API version
     unit (int): Enumerated component unit
 
@@ -11,8 +11,8 @@ def create_virtual_disks(rfo, body=None, api=1, unit=1):
     str: iLO response status
     """
 
-    if body is None:
-        body = {
+    if raid is None:
+        raid = {
             "DataGuard": "Disabled",
             "LogicalDrives": [
                {
@@ -28,7 +28,7 @@ def create_virtual_disks(rfo, body=None, api=1, unit=1):
             ]
         }
 
-    res = rfo.put(f"/redfish/v{api}/Systems/{unit}/smartstorageconfig1/settings", body)
+    res = rfo.put(f"/redfish/v{api}/Systems/{unit}/smartstorageconfig1/settings", raid)
     if res.status != 200:
         print(f"HTTP Fail Status: {res.status} - {res.read}")
         return "XXX"

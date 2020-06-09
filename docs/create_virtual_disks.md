@@ -13,7 +13,7 @@
 
 By default, a default RAID1 configuration is hard coded in the create_virtual_disks.py function:
 
-    body = {
+    raid = {
         "DataGuard": "Disabled",
         "LogicalDrives": [
            {
@@ -29,15 +29,15 @@ By default, a default RAID1 configuration is hard coded in the create_virtual_di
         ]
     }
 
-If a body dictionary variable is passed to the function, it will be used instead of the above.
+If a raid dictionary variable is passed to the function, it will be used instead of the above.
     
 To create the virtual raid disk:
 
     print(rf.create_virtual_disks(rfo))
 
-Or with the body variable passed to the function containing the raid configuration:
+Or with the raid variable passed to the function containing the raid configuration:
 
-    print(rf.create_virtual_disks(rfo, body)) 
+    print(rf.create_virtual_disks(rfo, raid)) 
 
 
 
