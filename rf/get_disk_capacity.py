@@ -23,17 +23,20 @@ def get_disk_capacity(rfo, api=1, unit=1):
     if res.status != 200:
         print(f"Error: {res.status}: {res.read}")
         return "XXX"
-    members = res.dict['Links']['Drives']
-    for d in members:
-        res = rfo.get(d['@odata.id'])
-        if res.status != 200:
-            print(f"Member Error: {res.status}: {res.read}")
-            return "XXX"
-        blob = blob + (
-            f"Disk {d['@odata.id']} Capacity Bytes: {res.dict['CapacityBytes']}\n")
+    #members = res.dict['Links']
+    if 'Drives'in res.dict['Links']:
+        members = res.dict['Links']['Drives']
+        for d in members:
+            res = rfo.get(d['@odata.id'])
+            if res.status != 200:
+                print(f"Member Error: {res.status}: {res.read}")
+                return "XXX"
+            blob = blob + (
+                f"Disk {d['@odata.id']} Capacity Bytes: {res.dict['CapacityBytes']}\n")
 
-        disk_capacity_total = disk_capacity_total + int(res.dict['CapacityBytes'])
-    print(disk_capacity_total) #FIXME:  remove this and return the proper value. Also fix the help string above.
+            disk_capacity_total = disk_capacity_total + int(res.dict['CapacityBytes'])
+    else:
+        blob = "No Disks"
     return blob
 
 

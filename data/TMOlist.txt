@@ -14,11 +14,11 @@ Done - def get_status(rfo)
 Done - def get_uuid(rfo)
 Done - def get_disk_capacity(rfo)
 Done - def get_disk_count(rfo)
-Done - def get_nic_names(rfo) --> extra function
+Done - def get_nic_names(rfo)
 Done - def get_nic_blob(rfo)
-Done - def get_cpu_blob(un, pw, ip)
-Done - def get_mem_blob(un, pw, ip)
-Done - def get_disk_blob(un, pw, ip)
+Done - def get_cpu_blob(rfo)
+Done - def get_mem_blob(rfo)
+Done - def get_disk_blob(rfo)
 
 TODO: def get_eth(un, pw, ip, nicname):
 TODO - def get_memory_count(un, pw, ip): # what is the number of DIMMS connected with memeory - 24 in the example.
