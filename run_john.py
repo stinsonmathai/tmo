@@ -1,19 +1,30 @@
 import rf
 from rf.config import *
 
-
 # Login session
 rfo = rf.login(un, pw, url)
+
+print(rf.install_os(rfo, "http://16.214.16.78/custom.iso"))
+
+
+'''
+print(rf.get_model(rfo))
+print(rf.get_firmware(rfo))
+print(rf.get_memory_total(rfo))
+print(rf.get_tag(rfo))
+print(rf.get_bios(rfo))
+print(rf.get_cpu(rfo))
+print(rf.get_status(rfo))
+print(rf.get_uuid(rfo))
+print(rf.get_disk_capacity(rfo))
+print(rf.get_disk_count(rfo))
+print(rf.get_disk_blob(rfo))
+print(rf.get_nic_blob(rfo))
+print(rf.get_cpu_blob(rfo))
+print(rf.get_mem_blob(rfo))
 print(rf.get_nic_names(rfo))
 
 
-
-"""
-api=1
-unit=1
-print(rf.enable_sriov(rfo))
-print(rf.reboot_server(rfo))
-print(rf.set_hostname(rfo, hostname="host.domain.com"))
 print(rf.set_dns(rfo, dns="8.8.8.8"))
 print(rf.set_timezone(rfo, tz="UtcM5"))
 print(rf.set_license_key(rfo, key="xxxx"))
@@ -29,11 +40,7 @@ print(rf.set_turbo(rfo, mode="Enabled"))
 print(rf.set_virtualization(rfo, mode="Enabled"))
 print(rf.set_boot_order(rfo, order=["Cd", "EmbeddedStorage", "PcieSlotStorage", "EmbeddedFlexLOM",
                                     "PcieSlotNic", "UefiShell", "Usb"]))
-print(rf.get_disk_blob(rfo))
-print(rf.get_mem_blob(rfo))
-print(rf.get_cpu_blob(rfo))
-
-"""
+'''
 
 # Logoff
 rfo.logout()

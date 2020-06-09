@@ -13,7 +13,14 @@ def get_nic_names(rfo, api=1, unit=1):
     list: Names of the NICS on the server
     """
     nic_names = []
-    res = rfo.get(f"/redfish/v{api}/Systems/{unit}/EthernetInterfaces")
+    # iLO version
+    res = rfo.get(f"/redfish/v{api}/managers/{unit}")
+    if "iLO 4" in res.dict['FirmwareVersion']:
+        url = f"/redfish/v{api}/systems/{unit}/NetworkAdapters"
+    else:
+        url = f"/redfish/v{api}/systems/{unit}/EthernetInterfaces"
+
+    res = rfo.get(url)
     if res.status != 200:
         print(f"Error: {res.status}: {res.read}")
         return "XXX"

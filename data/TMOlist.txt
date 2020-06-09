@@ -4,21 +4,22 @@ TODO: brief write up in readme on what the _init_, config files etc do.
 
 
 GET:
-Done - def get_model(rfo)
-Done - def get_firmware(rfo)
-Done - def get_memory_total(rfo)
-Done - def get_tag(rfo)
-Done - def get_bios(rfo)
-Done - def get_cpu(rfo)
-Done - def get_status(rfo)
-Done - def get_uuid(rfo)
-Done - def get_disk_capacity(rfo)
-Done - def get_disk_count(rfo)
-Done - def get_nic_names(rfo)
-Done - def get_nic_blob(rfo)
-Done - def get_cpu_blob(rfo)
-Done - def get_mem_blob(rfo)
-Done - def get_disk_blob(rfo)
+Done ilo4/5 - def get_model(rfo)
+Done ilo4/5 - def get_firmware(rfo)
+Done ilo4/5 - def get_memory_total(rfo)
+Done ilo4/5 - def get_tag(rfo) NOTE: Asset string can be ""
+Done ilo4/5 - def get_bios(rfo)
+Done ilo4/5 - def get_cpu(rfo)
+Done ilo4/5 - def get_status(rfo)
+Done ilo4/5 - def get_uuid(rfo)
+Done ilo4/5 - def get_disk_capacity(rfo)
+Done ilo4/5 - def get_disk_count(rfo)
+Done ilo4/5 - def get_disk_blob(un, pw, ip)
+Done ilo4/5 - def get_nic_blob(rfo)
+Done ilo4/5 - def get_cpu_blob(un, pw, ip)
+Done ilo4/5 - def get_mem_blob(un, pw, ip)
+Done ilo4/5 - def get_nic_names(rfo) --> extra function
+
 
 TODO: def get_eth(un, pw, ip, nicname):
 TODO - def get_memory_count(un, pw, ip): # what is the number of DIMMS connected with memeory - 24 in the example.
@@ -27,12 +28,13 @@ TODO: def get_memory(un, pw, ip):
 
 
 POST:
-Done - def reboot_server
+Done ilo4/5 - def reboot_server
 Done - def set_hostname
 Done - def set_dns
 Done - def set_ntp
 Done - Need to test - def set_timezone
 TODO: DO NOT HAVE CAPABILITY IN CURRENT ILO - def set_server_location_information ( Datacenter/ RR / Usage information)
+TODO: Alternative note section
 Done - def update_firmware/bios
 Done - def set_license_key TODO: Implemented but not tested (waiting for lab server)
 Done - def set_power_options (Balanced / Power cap disabled)
@@ -43,9 +45,9 @@ Done - def enable_alerts
 Done - def set_SNMP
 TODO: def confirgure_RAID # Need lab box
 TODO: def create_virtal_disks # Need lab box
-Done - def enable_sriov
+Done ilo4/5 - def enable_sriov
 Done - def set_boot_mode/order
-TODO: def install_os - for unattended install - look into the ISO
+Done - def install_os
 
 
 
