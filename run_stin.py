@@ -7,10 +7,42 @@ from rf.config import *
 
 
 # Login session
-rfo = rf.login(un, pw, url)
-k = rf.get_nic_blob(rfo)
-help(rf.get_nic_blob)
 
+rfo = rf.login(un, pw, url)
+
+print("-"*40)
+rf.get_model(rfo)
+print("-"*40)
+rf.get_firmware(rfo)
+print("-"*40)
+rf.get_memory_total(rfo)
+print("-"*40)
+rf.get_tag(rfo)
+print("-"*40)
+rf.get_bios(rfo)
+print("-"*40)
+rf.get_cpu(rfo)
+print("-"*40)
+rf.get_status(rfo)
+print("-"*40)
+rf.get_uuid(rfo)
+print("-"*40)
+rf.get_nic_names(rfo)
+print("-"*40)
+rf.get_nic_blob(rfo)
+print("-"*40)
+rf.get_cpu_blob(rfo)
+print("-"*40)
+rf.get_mem_blob(rfo)
+print("-"*40)
+
+
+#rf.get_disk_blob(rfo)
+#print("-"*40)
+#rf.get_disk_capacity(rfo)
+#print("-"*40)
+#rf.get_disk_count(rfo)
+#print("-"*40)
 
 # Logoff
 rfo.logout()
