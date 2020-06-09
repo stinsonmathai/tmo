@@ -1,17 +1,7 @@
-# iLO 5 Tmo
-# un = "Administrator"
-# pw = "8M9Q8GDC"
-# url = "https://10.145.23.91"
 
-# iLO 4 Tmo
-# un = "Administrator"
-# pw = "59478916"
-# url = "https://10.145.143.7"
-
-# HPE New iLO5
 un = "Admin"
-pw = "Password"
-url = "https://16.83.131.155"
+pw = "xxx"
+url = "https://x.x.x.x"
 
 api = 1
 unit = 1
