@@ -33,4 +33,4 @@ from rf.set_boot_order import set_boot_order
 from rf.get_cpu_blob import get_cpu_blob
 from rf.get_mem_blob import get_mem_blob
 from rf.install_os import install_os
-
+from rf.create_virtual_disks import create_virtual_disks

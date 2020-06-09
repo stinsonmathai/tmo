@@ -34,7 +34,6 @@ Done - def set_dns
 Done - def set_ntp
 Done - Need to test - def set_timezone
 TODO: DO NOT HAVE CAPABILITY IN CURRENT ILO - def set_server_location_information ( Datacenter/ RR / Usage information)
-TODO: Alternative note section
 Done - def update_firmware/bios
 Done - def set_license_key TODO: Implemented but not tested (waiting for lab server)
 Done - def set_power_options (Balanced / Power cap disabled)
@@ -43,8 +42,8 @@ Done - def change_password
 Done - def create_user
 Done - def enable_alerts
 Done - def set_SNMP
-TODO: def confirgure_RAID # Need lab box
-TODO: def create_virtal_disks # Need lab box
+Done - def confirgure_RAID # Need lab box
+Done - def create_virtal_disks # Need lab box
 Done ilo4/5 - def enable_sriov
 Done - def set_boot_mode/order
 Done - def install_os

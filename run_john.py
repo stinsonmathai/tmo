@@ -4,8 +4,8 @@ from rf.config import *
 # Login session
 rfo = rf.login(un, pw, url)
 
-print(rf.install_os(rfo, "http://16.214.16.78/custom.iso"))
 
+print(rf.create_virtual_disks(rfo))
 
 '''
 print(rf.get_model(rfo))
@@ -40,6 +40,7 @@ print(rf.set_turbo(rfo, mode="Enabled"))
 print(rf.set_virtualization(rfo, mode="Enabled"))
 print(rf.set_boot_order(rfo, order=["Cd", "EmbeddedStorage", "PcieSlotStorage", "EmbeddedFlexLOM",
                                     "PcieSlotNic", "UefiShell", "Usb"]))
+print(rf.install_os(rfo, "http://16.214.16.78/custom.iso"))
 '''
 
 # Logoff
