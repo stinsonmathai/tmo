@@ -1,9 +1,9 @@
-def set_power_options(rfo, mode, api=1, unit=1):
+def set_power_options(rfo, mode='BalancedMode', api=1, unit=1):
     """Set power mode options
 
     Parameters:
     rfo (object): Redfish login session
-    mode (str): Power mode TODO: power modes available
+    mode (str): BalancedMode, HighEfficiencyAuto, HighEfficiencyOddStandby, HighEfficiencyEvenStandby
     api (int): API version
     unit (int): Enumerated component unit
 
