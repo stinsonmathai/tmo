@@ -4,21 +4,21 @@ TODO: brief write up in readme on what the _init_, config files etc do.
 
 
 GET:
-Done ilo4/5 - def get_model(rfo)
-Done ilo4/5 - def get_firmware(rfo)
-Done ilo4/5 - def get_memory_total(rfo)
-Done ilo4/5 - def get_tag(rfo) NOTE: Asset string can be ""
-Done ilo4/5 - def get_bios(rfo)
-Done ilo4/5 - def get_cpu(rfo)
-Done ilo4/5 - def get_status(rfo)
-Done ilo4/5 - def get_uuid(rfo)
-Done ilo4/5 - def get_disk_capacity(rfo)
-Done ilo4/5 - def get_disk_count(rfo)
-Done ilo4/5 - def get_disk_blob(un, pw, ip)
-Done ilo4/5 - def get_nic_blob(rfo)
-Done ilo4/5 - def get_cpu_blob(un, pw, ip)
-Done ilo4/5 - def get_mem_blob(un, pw, ip)
-Done ilo4/5 - def get_nic_names(rfo) --> extra function
+TMO APPROVED: Done ilo4/5 - def get_model(rfo)
+TMO APPROVED: Done ilo4/5 - def get_firmware(rfo)
+TMO APPROVED: Done ilo4/5 - def get_memory_total(rfo)
+TMO APPROVED: Done ilo4/5 - def get_tag(rfo) NOTE: Asset string can be ""
+TMO APPROVED: Done ilo4/5 - def get_bios(rfo)
+TMO APPROVED: Done ilo4/5 - def get_cpu(rfo)
+TMO APPROVED: Done ilo4/5 - def get_status(rfo)
+TMO APPROVED: Done ilo4/5 - def get_uuid(rfo)
+TMO APPROVED: Done ilo4/5 - def get_disk_capacity(rfo)
+TMO APPROVED: Done ilo4/5 - def get_disk_count(rfo)
+TMO APPROVED: Done ilo4/5 - def get_disk_blob(un, pw, ip)
+TMO APPROVED: Done ilo4/5 - def get_nic_blob(rfo)
+TMO APPROVED: Done ilo4/5 - def get_cpu_blob(un, pw, ip)
+TMO APPROVED: Done ilo4/5 - def get_mem_blob(un, pw, ip)
+TMO APPROVED: Done ilo4/5 - def get_nic_names(rfo) --> extra function
 
 
 TODO: def get_eth(un, pw, ip, nicname):
@@ -28,24 +28,24 @@ TODO: def get_memory(un, pw, ip):
 
 
 POST:
-Done ilo4/5 - def reboot_server
-Done - def set_hostname
+TMO APPROVED: Done ilo4/5 - def reboot_server
+TMO APPROVED: Done - def set_hostname
 Done - def set_dns
-Done - def set_ntp
-Done - Need to test - def set_timezone
+TMO APPROVED: Done - def set_ntp
+Done - def set_timezone
 TODO: DO NOT HAVE CAPABILITY IN CURRENT ILO - def set_server_location_information ( Datacenter/ RR / Usage information)
 Done - def update_firmware/bios
-Done - def set_license_key TODO: Implemented but not tested (waiting for lab server)
+TMO APPROVED: Done - def set_license_key
 Done - def set_power_options (Balanced / Power cap disabled)
-Done - def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
-Done - def change_password
-Done - def create_user
+TMO APPROVED: Done - def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
+TMO APPROVED: Done - def change_password
+TMO APPROVED: Done - def create_user
 Done - def enable_alerts
 Done - def set_SNMP
 Done - def confirgure_RAID # Need lab box
 Done - def create_virtal_disks # Need lab box
-Done ilo4/5 - def enable_sriov
-Done - def set_boot_mode/order
+TMO APPROVED: Done ilo4/5 - def enable_sriov
+TMO APPROVED: Done - def set_boot_mode/order
 Done - def install_os
 
 
