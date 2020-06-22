@@ -18,7 +18,8 @@ def reboot_server(rfo, api=1, unit=1):
         url = f"/redfish/v{api}/Systems/{unit}/Actions/ComputerSystem.Reset/"
         body = dict(Action="ComputerSystem.Reset", ResetType="ForceRestart")
 
-    res = rfo.post(url, body)
+    # res = rfo.post(url, body)
+    res = rfo.post(url, body=body)
     if res.status != 200:
         print(f"Error: {res.status}: {res.read}")
         return "XXX"

@@ -4,7 +4,32 @@ from rf.config import *
 # Login session
 rfo = rf.login(un, pw, url)
 
-print(rf.set_dns(rfo, dns="8.8.8.8"))
+
+print(rf.get_boot_order(rfo))
+print(rf.set_boot_order(rfo, order=["Cd", "Usb", "EmbeddedStorage", "PcieSlotStorage", "EmbeddedFlexLOM",
+                                    "PcieSlotNic", "UefiShell"]))
+
+print(rf.get_turbo(rfo))
+print(rf.set_turbo(rfo, mode="Enabled"))
+
+
+print(rf.get_jitter(rfo))
+print(rf.set_jitter(rfo, mode="Auto-tuned"))
+
+# print(rf.get_dns(rfo))
+# print(rf.set_dns(rfo, dns="16.110.135.52"))
+
+# print(rf.get_hostname(rfo))
+# print(rf.set_hostname(rfo, "tmo"))
+
+# print(rf.install_os(rfo, "http://16.116.132.70/custom2.iso"))
+
+print(rf.reboot_server(rfo))
+
+
+
+
+
 
 
 '''

@@ -15,20 +15,23 @@ def install_os(rfo, iso_url, api=1, unit=1):
 
     # Eject any existing media
     body = {}
-    res = rfo.post(f"/redfish/v{api}/Managers/{unit}/VirtualMedia/2/Actions/Oem/Hpe/HpeiLOVirtualMedia.EjectVirtualMedia", body)
+    # res = rfo.post(f"/redfish/v{api}/Managers/{unit}/VirtualMedia/2/Actions/Oem/Hpe/HpeiLOVirtualMedia.EjectVirtualMedia", body)
+    res = rfo.post(f"/redfish/v{api}/Managers/{unit}/VirtualMedia/2/Actions/Oem/Hpe/HpeiLOVirtualMedia.EjectVirtualMedia", body=body)
     if res.status != 200:
         print(f"Error Eject: {res.status}: {res.read}")
         return "XXX"
 
     # Insert ISO image URL and set boot on reset
     body = {"Image": iso_url}
-    res = rfo.post(f"/redfish/v{api}/Managers/{unit}/VirtualMedia/2/Actions/Oem/Hpe/HpeiLOVirtualMedia.InsertVirtualMedia", body)
+    # res = rfo.post(f"/redfish/v{api}/Managers/{unit}/VirtualMedia/2/Actions/Oem/Hpe/HpeiLOVirtualMedia.InsertVirtualMedia", body)
+    res = rfo.post(f"/redfish/v{api}/Managers/{unit}/VirtualMedia/2/Actions/Oem/Hpe/HpeiLOVirtualMedia.InsertVirtualMedia", body=body)
     if res.status != 200:
         print(f"Error Insert: {res.status}: {res.read}")
         return "XXX"
     patch_body = {}
     patch_body["Oem"] = {"Hpe": {"BootOnNextServerReset": True}}
-    res = rfo.patch(f"/redfish/v{api}/Managers/{unit}/VirtualMedia/2/", patch_body)
+    # res = rfo.patch(f"/redfish/v{api}/Managers/{unit}/VirtualMedia/2/", patch_body)
+    res = rfo.patch(f"/redfish/v{api}/Managers/{unit}/VirtualMedia/2/", body=patch_body)
     if res.status != 200:
         print(f"Error Boot: {res.status}: {res.read}")
         return "XXX"

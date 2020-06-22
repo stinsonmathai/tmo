@@ -22,7 +22,8 @@ def change_password(rfo, username, password, api=1):
             return "XXX"
         if res.dict['UserName'] == username:
             body = {'Password': password}
-            res = rfo.patch(m['@odata.id'], body)
+            # res = rfo.patch(m['@odata.id'], body)
+            res = rfo.patch(m['@odata.id'], body=body)
             if res.status != 200:
                 print(f"HTTP Fail Status: {res.status} - {res.read}")
                 return "XXX"

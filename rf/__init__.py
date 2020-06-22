@@ -34,3 +34,8 @@ from rf.get_cpu_blob import get_cpu_blob
 from rf.get_mem_blob import get_mem_blob
 from rf.install_os import install_os
 from rf.create_virtual_disks import create_virtual_disks
+from rf.get_hostname import get_hostname
+from rf.get_dns import get_dns
+from rf.get_jitter import get_jitter
+from rf.get_turbo import get_turbo
+from rf.get_boot_order import get_boot_order

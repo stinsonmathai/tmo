@@ -11,7 +11,8 @@ def set_power_options(rfo, mode='BalancedMode', api=1, unit=1):
     str: iLO response status
     """
     body = dict(RedundantPowerSupply=mode)
-    res = rfo.patch(f"/redfish/v{api}/Systems/{unit}/bios/settings", body)
+    #res = rfo.patch(f"/redfish/v{api}/Systems/{unit}/bios/settings", body)
+    res = rfo.patch(f"/redfish/v{api}/Systems/{unit}/bios/settings", body=body)
     if res.status != 200:
         print(f"HTTP Fail Status: {res.status} - {res.read}")
         return("XXX")

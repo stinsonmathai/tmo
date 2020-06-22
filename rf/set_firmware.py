@@ -33,6 +33,7 @@ def set_firmware(rfo, firmware, update_repo=True, update_target=False):
     body.append(file_tuple)
     header = {'Cookie': 'sessionKey=' + session_key}
     res = rfo.post(path, body, headers=header)
+    #res = rfo.post(path, body=body, headers=header)
     if res.status != 200:
         print(f"HTTP Fail Status: {res.status} - {res.read}")
         return("XXX")

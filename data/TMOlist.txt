@@ -27,17 +27,18 @@ TODO - def get_memory_size(un, pw, ip): # whats is the size of the DIMM?  Check 
 TODO: def get_memory(un, pw, ip):
 
 
+
 POST:
-TMO APPROVED: Done ilo4/5 - def reboot_server
-TMO APPROVED: Done - def set_hostname
-Done - def set_dns
+GET - TMO APPROVED: Done - def set_hostname
+GET - Done - def set_dns
+TMO APPROVED: Done - def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
+
 TMO APPROVED: Done - def set_ntp
 Done - def set_timezone
 TODO: DO NOT HAVE CAPABILITY IN CURRENT ILO - def set_server_location_information ( Datacenter/ RR / Usage information)
 Done - def update_firmware/bios
 TMO APPROVED: Done - def set_license_key
 Done - def set_power_options (Balanced / Power cap disabled)
-TMO APPROVED: Done - def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
 TMO APPROVED: Done - def change_password
 TMO APPROVED: Done - def create_user
 Done - def enable_alerts
@@ -47,6 +48,7 @@ Done - def create_virtal_disks # Need lab box
 TMO APPROVED: Done ilo4/5 - def enable_sriov
 TMO APPROVED: Done - def set_boot_mode/order
 Done - def install_os
+TMO APPROVED: Done ilo4/5 - def reboot_server
 
 
 
