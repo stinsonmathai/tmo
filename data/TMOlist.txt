@@ -31,7 +31,8 @@ TODO: def get_memory(un, pw, ip):
 POST:
 GET - TMO APPROVED: Done - def set_hostname
 GET - Done - def set_dns
-TMO APPROVED: Done - def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
+GET - Done - def update_firmware/bios
+GET - TMO APPROVED: Done - def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
 
 TMO APPROVED: Done - def set_ntp
 Done - def set_timezone

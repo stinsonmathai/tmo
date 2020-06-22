@@ -11,7 +11,6 @@ def set_snmp(rfo, destinations, api=1, unit=1):
     str: iLO response status
     """
     body = {'AlertDestinations': destinations}
-    # res = rfo.patch(f"/redfish/v{api}/Managers/{unit}/SnmpService", body)
     res = rfo.patch(f"/redfish/v{api}/Managers/{unit}/SnmpService", body=body)
     if res.status != 200:
         print(f"HTTP Fail Status: {res.status} - {res.read}")

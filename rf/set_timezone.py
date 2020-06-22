@@ -14,8 +14,7 @@ def set_timezone(rfo, tz, api=1, unit=1):
     Returns:
     str: iLO response status
     """
-    body = dict(TimeZone=tz)
-    # res = rfo.patch(f"/redfish/v{api}/Systems/{unit}/bios/settings", body)
+    body = {'Attributes': {'TimeZone': tz}}
     res = rfo.patch(f"/redfish/v{api}/Systems/{unit}/bios/settings", body=body)
     if res.status != 200:
         print(f"HTTP Fail Status: {res.status} - {res.read}")

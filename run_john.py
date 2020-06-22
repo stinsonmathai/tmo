@@ -4,6 +4,24 @@ from rf.config import *
 # Login session
 rfo = rf.login(un, pw, url)
 
+print(rf.get_timezone(rfo))
+print(rf.set_timezone(rfo, tz="UtcM5"))
+
+print(rf.get_snmp_alerts(rfo))
+print(rf.set_snmp_alerts(rfo, alert=True, communities=["public", "", ""]))
+
+print(rf.get_snmp(rfo))
+print(rf.set_snmp(rfo, destinations=["10.0.1.100"]))
+
+print(rf.get_power_options(rfo))
+print(rf.set_power_options(rfo, mode="BalancedMode"))
+
+print(rf.get_ntp(rfo))
+# TODO
+print(rf.set_ntp(rfo, ntp=["132.163.96.5", "128.138.141.177"]))
+
+print(rf.get_firmware(rfo))
+print(rf.set_firmware(rfo, 'data/ilo5_215.bin', True, False))
 
 print(rf.get_boot_order(rfo))
 print(rf.set_boot_order(rfo, order=["Cd", "Usb", "EmbeddedStorage", "PcieSlotStorage", "EmbeddedFlexLOM",
@@ -12,9 +30,11 @@ print(rf.set_boot_order(rfo, order=["Cd", "Usb", "EmbeddedStorage", "PcieSlotSto
 print(rf.get_turbo(rfo))
 print(rf.set_turbo(rfo, mode="Enabled"))
 
-
 print(rf.get_jitter(rfo))
 print(rf.set_jitter(rfo, mode="Auto-tuned"))
+
+print(rf.get_virtualization(rfo))
+print(rf.set_virtualization(rfo, mode="Enabled"))
 
 # print(rf.get_dns(rfo))
 # print(rf.set_dns(rfo, dns="16.110.135.52"))

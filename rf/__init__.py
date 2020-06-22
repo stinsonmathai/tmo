@@ -39,3 +39,10 @@ from rf.get_dns import get_dns
 from rf.get_jitter import get_jitter
 from rf.get_turbo import get_turbo
 from rf.get_boot_order import get_boot_order
+from rf.get_virtualization import get_virtualization
+from rf.get_ntp import get_ntp
+from rf.get_power_options import get_power_options
+from rf.get_snmp import get_snmp
+from rf.get_snmp_alerts import get_snmp_alerts
+from rf.get_timezone import get_timezone
+
