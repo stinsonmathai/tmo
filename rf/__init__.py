@@ -45,4 +45,7 @@ from rf.get_power_options import get_power_options
 from rf.get_snmp import get_snmp
 from rf.get_snmp_alerts import get_snmp_alerts
 from rf.get_timezone import get_timezone
+from rf.get_license_key import get_license_key
+from rf.get_sriov import get_sriov
+from rf.get_virtual_disks import get_virtual_disks
 

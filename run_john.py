@@ -4,6 +4,8 @@ from rf.config import *
 # Login session
 rfo = rf.login(un, pw, url)
 
+print(rf.get_sriov(rfo))
+
 print(rf.get_timezone(rfo))
 print(rf.set_timezone(rfo, tz="UtcM5"))
 
@@ -17,7 +19,7 @@ print(rf.get_power_options(rfo))
 print(rf.set_power_options(rfo, mode="BalancedMode"))
 
 print(rf.get_ntp(rfo))
-# TODO
+# TODO (DHCP ENABLED?)
 print(rf.set_ntp(rfo, ntp=["132.163.96.5", "128.138.141.177"]))
 
 print(rf.get_firmware(rfo))

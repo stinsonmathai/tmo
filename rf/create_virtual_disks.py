@@ -28,7 +28,9 @@ def create_virtual_disks(rfo, raid=None, api=1, unit=1):
             ]
         }
 
-    res = rfo.put(f"/redfish/v{api}/Systems/{unit}/smartstorageconfig1/settings", raid)
+    res = rfo.get(f"/redfish/v{api}/Systems/{unit}")
+    url = res.dict['Oem']['Hpe']['SmartStorageConfig'][0]['@odata.id']
+    res = rfo.put(f"{url}/settings", raid)
     if res.status != 200:
         print(f"HTTP Fail Status: {res.status} - {res.read}")
         return "XXX"

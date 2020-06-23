@@ -29,27 +29,28 @@ TODO: def get_memory(un, pw, ip):
 
 
 POST:
-GET - TMO APPROVED: Done - def set_hostname
+
+TMO APPROVED: GET - Done - def set_hostname
+TMO APPROVED: GET - Done - def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
+TMO APPROVED: GET - Done - def set_ntp
+TMO APPROVED: GET - Done - def set_license_key
+TMO APPROVED: GET - Done - def set_boot_mode/order
+TMO APPROVED: GET - Done ilo4/5 - def enable_sriov
 GET - Done - def set_dns
 GET - Done - def update_firmware/bios
-GET - TMO APPROVED: Done - def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
+GET - Done - def set_timezone
+GET - Done - def update_firmware/bios
+GET - Done - def set_power_options (Balanced / Power cap disabled)
+GET - Done - def enable_alerts
+GET - Done - def set_SNMP
+GET - Done - def create_virtal_disks # Need lab box
 
-TMO APPROVED: Done - def set_ntp
-Done - def set_timezone
-TODO: DO NOT HAVE CAPABILITY IN CURRENT ILO - def set_server_location_information ( Datacenter/ RR / Usage information)
-Done - def update_firmware/bios
-TMO APPROVED: Done - def set_license_key
-Done - def set_power_options (Balanced / Power cap disabled)
+TMO APPROVED: Done ilo4/5 - def reboot_server
 TMO APPROVED: Done - def change_password
 TMO APPROVED: Done - def create_user
-Done - def enable_alerts
-Done - def set_SNMP
-Done - def confirgure_RAID # Need lab box
-Done - def create_virtal_disks # Need lab box
-TMO APPROVED: Done ilo4/5 - def enable_sriov
-TMO APPROVED: Done - def set_boot_mode/order
 Done - def install_os
-TMO APPROVED: Done ilo4/5 - def reboot_server
 
+
+TODO: DO NOT HAVE CAPABILITY IN CURRENT ILO - def set_server_location_information ( Datacenter/ RR / Usage information)
 
 

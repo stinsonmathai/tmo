@@ -7,7 +7,7 @@ def change_password(rfo, username, password, api=1):
     password (str): New password
 
     Returns:
-    str: iLO response status
+    str: password reset status
     """
 
     res = rfo.get(f"/redfish/v{api}/AccountService/Accounts")

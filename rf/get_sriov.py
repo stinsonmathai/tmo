@@ -1,5 +1,5 @@
-def get_ntp(rfo, api=1, unit=1):
-    """Get network time protocol list of servers
+def get_sriov(rfo, api=1, unit=1):
+    """ Get sriov status
 
     Parameters:
     rfo (object): Redfish Client Login Object
@@ -7,11 +7,11 @@ def get_ntp(rfo, api=1, unit=1):
     unit (int): Unit Value
 
     Returns:
-    str: NTP Array
+    str: sriov status
     """
-    res = rfo.get(f"/redfish/v{api}/Managers/{unit}/datetime")
+    res = rfo.get(f"/redfish/v{api}/systems/{unit}/bios")
     if res.status != 200:
         print(f"Error: {res.status}: {res.read}")
         return "XXX"
-    return res.dict['StaticNTPServers']
+    return res.dict['Attributes']['Sriov']
 

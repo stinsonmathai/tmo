@@ -1,5 +1,5 @@
 def get_boot_order(rfo, api=1, unit=1):
-    """Get boot order
+    """Obtain server boot device order
 
     Parameters:
     rfo (object): Redfish login session

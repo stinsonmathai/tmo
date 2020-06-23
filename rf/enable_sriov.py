@@ -13,7 +13,6 @@ def enable_sriov(rfo, enable="Enabled", api=1, unit=1):
     body = dict()
     body["Attributes"] = dict()
     body["Attributes"]["Sriov"] = enable
-    # res = rfo.patch(f"/redfish/v{api}/Systems/{unit}/bios/settings", body)
     res = rfo.patch(f"/redfish/v{api}/Systems/{unit}/bios/settings", body=body)
     if res.status != 200:
         print(f"Error: {res.status}: {res.read}")
