@@ -1,7 +1,3 @@
-TODO: write instruction in the readme on how to add a function...
-TODO: write instructions on how to run a function.
-TODO: brief write up in readme on what the _init_, config files etc do.
-
 
 GET:
 TMO APPROVED: Done ilo4/5 - def get_model(rfo)
@@ -19,7 +15,20 @@ TMO APPROVED: Done ilo4/5 - def get_nic_blob(rfo)
 TMO APPROVED: Done ilo4/5 - def get_cpu_blob(un, pw, ip)
 TMO APPROVED: Done ilo4/5 - def get_mem_blob(un, pw, ip)
 TMO APPROVED: Done ilo4/5 - def get_nic_names(rfo) --> extra function
-
+NEW: get_dns
+NEW: get_hostname
+NEW: get_jitter
+NEW: get_license_key
+NEW: get_ntp
+NEW: get_power_options
+NEW: get_snmp
+NEW: get_snmp_alerts
+NEW: get_sriov
+NEW: get_timezone
+NEW: get_turbo
+NEW: get_virtual_disks
+NEW: get_virtualization
+NEW: get_ilo_net_blob
 
 TODO: def get_eth(un, pw, ip, nicname):
 TODO - def get_memory_count(un, pw, ip): # what is the number of DIMMS connected with memeory - 24 in the example.
@@ -28,29 +37,30 @@ TODO: def get_memory(un, pw, ip):
 
 
 
-POST:
+SET:
 
-TMO APPROVED: GET - Done - def set_hostname
-TMO APPROVED: GET - Done - def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
-TMO APPROVED: GET - Done - def set_ntp
-TMO APPROVED: GET - Done - def set_license_key
-TMO APPROVED: GET - Done - def set_boot_mode/order
-TMO APPROVED: GET - Done ilo4/5 - def enable_sriov
-GET - Done - def set_dns
-GET - Done - def update_firmware/bios
-GET - Done - def set_timezone
-GET - Done - def update_firmware/bios
-GET - Done - def set_power_options (Balanced / Power cap disabled)
-GET - Done - def enable_alerts
-GET - Done - def set_SNMP
-GET - Done - def create_virtal_disks # Need lab box
-
+TMO APPROVED: Done - def set_hostname
+TMO APPROVED: Done - def set_performance (Virtualization Performance Workload Profile / Turbo boost enabled / Jitter smoothing on )
+TMO APPROVED: Done - def set_ntp
+TMO APPROVED: Done - def set_license_key
+TMO APPROVED: Done - def set_boot_mode/order
+TMO APPROVED: Done ilo4/5 - def enable_sriov
 TMO APPROVED: Done ilo4/5 - def reboot_server
 TMO APPROVED: Done - def change_password
 TMO APPROVED: Done - def create_user
+Done - def set_dns
+Done - def update_firmware/bios
+Done - def set_timezone
+Done - def update_firmware/bios
+Done - def set_power_options (Balanced / Power cap disabled)
+Done - def enable_alerts
+Done - def set_SNMP
+Done - def create_virtal_disks # Need lab box
 Done - def install_os
 
+NEW: set_ilo_dns
+NEW: set_ilo_ip
+NEW: set_ilo_dhcp
 
 TODO: DO NOT HAVE CAPABILITY IN CURRENT ILO - def set_server_location_information ( Datacenter/ RR / Usage information)
-
 
