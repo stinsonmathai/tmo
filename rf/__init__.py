@@ -48,4 +48,8 @@ from rf.get_timezone import get_timezone
 from rf.get_license_key import get_license_key
 from rf.get_sriov import get_sriov
 from rf.get_virtual_disks import get_virtual_disks
+from rf.set_ilo_dhcp import set_ilo_dhcp
+from rf.set_ilo_ip import set_ilo_ip
+from rf.set_ilo_dns import set_ilo_dns
+from rf.get_ilo_net_blob import get_ilo_net_blob
 

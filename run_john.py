@@ -4,6 +4,19 @@ from rf.config import *
 # Login session
 rfo = rf.login(un, pw, url)
 
+
+
+print(rf.set_ilo_dhcp(rfo, dhcp=False))
+
+ip = {"IPv4Addresses": [{"Address": "16.91.158.182", "Gateway": "16.91.152.1", "SubnetMask": "255.255.248.0"}]}
+print(rf.set_ilo_ip(rfo, ip=ip))
+
+dns = ["16.110.135.52", "16.110.135.51"]
+print(rf.set_ilo_dns(rfo, dns=dns))
+
+print(rf.get_ilo_net_blob(rfo))
+
+
 print(rf.get_sriov(rfo))
 
 print(rf.get_timezone(rfo))
