@@ -4,6 +4,7 @@ from rf.config import *
 # Login session
 rfo = rf.login(un, pw, url)
 
+print(rf.get_profile(rfo))
 
 
 print(rf.set_ilo_dhcp(rfo, dhcp=False))

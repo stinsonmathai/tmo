@@ -52,4 +52,6 @@ from rf.set_ilo_dhcp import set_ilo_dhcp
 from rf.set_ilo_ip import set_ilo_ip
 from rf.set_ilo_dns import set_ilo_dns
 from rf.get_ilo_net_blob import get_ilo_net_blob
+from rf.get_profile import get_profile
+from rf.set_profile import set_profile
 

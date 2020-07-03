@@ -11,6 +11,8 @@ def set_dns(rfo, dns, api=1, unit=1):
     str: iLO response status
     """
 
+    # TODO: add NONE for DNS attribute
+
     body = {'Attributes': {'Ipv4PrimaryDNS': dns}}
     res = rfo.patch(f"/redfish/v{api}/Systems/{unit}/bios/settings", body=body)
     # res = rfo.patch(f"/redfish/v{api}/Systems/{unit}/bios/settings", body)
